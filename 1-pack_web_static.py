@@ -3,6 +3,7 @@ from pathlib import Path
 from fabric import task
 from fabric.api import local
 
+
 @task
 def do_pack():
     if not Path("verisons").is_dir():
