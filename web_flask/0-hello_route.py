@@ -1,6 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
-starts a Flask web application
+flask applictaion will start from here
 """
 
 from flask import Flask
@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def index():
-    """returns Hello HBNB!"""
+    """it will return the corrresponding anser"""
     return 'Hello HBNB!'
 
 if __name__ == '__main__':
