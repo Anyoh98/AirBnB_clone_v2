@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-starts a Flask web application
+ a simpke Flask web application
 """
 
 from flask import Flask, render_template
@@ -11,14 +11,14 @@ app = Flask(__name__)
 
 @app.route('/cities_by_states', strict_slashes=False)
 def cities_by_states():
-    """display the states and cities listed in alphabetical order"""
+    """returns given answzr"""
     states = storage.all("State").values()
     return render_template('8-cities_by_states.html', states=states)
 
 
 @app.teardown_appcontext
 def teardown_db(exception):
-    """closes the storage on teardown"""
+    """returns given answzr"""
     storage.close()
 
 if __name__ == '__main__':
